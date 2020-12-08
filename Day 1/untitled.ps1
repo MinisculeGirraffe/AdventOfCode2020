@@ -1,4 +1,4 @@
-```Powershell
+
 [int[]]$nums = Get-Content .\puzzleInput.txt
 
 #Part 1
