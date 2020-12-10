@@ -7,7 +7,7 @@ $objArray = [System.Collections.ArrayList]::new()
 for ($i = 0; $i -lt $passports.Count; $i++) {
     $obj = [PSCustomObject]::new()
     (0..($passports[$i].count - 1)) | ? { $_ % 2 -eq 0 } | % {
-        Add-Member -InputObject $obj -MemberType NoteProperty -Name $passports[$i][$_] -Value $passports[$i][$_ + 1] -TypeName string
+        Add-Member -InputObject $obj -MemberType NoteProperty -Name $passports[$i][$_] -Value $passports[$i][$_ + 1] 
     }
     [void]$objArray.Add($obj)
 }
