@@ -1,3 +1,4 @@
+$text = Get-Content .\puzzleInput.txt | % { ,[char[]]$_ }
 #Part 1
 for ($($i = 1; $j = 3); $i -lt $text.Count; $($i += 1; $j += 3)) {
     if ($j -gt ($text[$i].length - 1 ) ) {
